@@ -6,7 +6,7 @@
 name: Soumojit Bhattacharya
 
 # Short bio or description (displayed in the header)
-# description: the profile of an engineer, researcher and software developer
+description: "Soumojit Bhattacharya: robot learning at CMU. Cheap sim data, safe deployment, and learning from what deployment exposes."
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: images/photo.jpeg
@@ -18,10 +18,10 @@ avatar: images/photo.jpeg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: soumojit048@gmail.com
+  email: soumojib@andrew.cmu.edu
   facebook:
   flickr:
-  github: BabaYaga840
+  github: Sumo048
   instagram: s.b.048
   linkedin: Soumojit Bhattacharya
   pinterest:
@@ -42,7 +42,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: "https://BabaYaga840.github.io" # the base hostname & protocol for your site
+url: "https://sumo048.github.io" # the base hostname & protocol for your site
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -91,3 +91,5 @@ exclude:
   - todo.txt
   - _temp/index.html
   - _temp/
+  - _make_favicon.sh
+  - _make_thumbnails.sh

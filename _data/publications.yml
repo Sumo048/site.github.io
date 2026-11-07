@@ -1,0 +1,50 @@
+# Papers, newest first. `me: true` cards get the highlight treatment.
+# Authors: wrap your own name in <b></b>.
+
+- title: "CS-Pi: Constraint-Satisfying Flow Policy Sampling"
+  authors: "<b>Soumojit Bhattacharya</b>, Oliver Kroemer, Shubham Tulsiani"
+  venue: "CoRL 2026"
+  year: 2026
+  image: images/cspi.jpg
+  highlight: true
+  tldr: "Make a frozen flow policy obey hard constraints at test time. Draw an action, project it onto the safe set, then renoise it by however far it had to move and let the policy denoise again. No retraining, no proxy version of the constraint, and the final action stays on-policy for the pretrained model. 55% safe-success on a real Franka, vs 40% for projection."
+  links:
+    - { name: "project page", url: "https://sumo048.github.io/CS-pi_site/" }
+    - { name: "paper", url: "https://openreview.net/forum?id=2NBZAh51If" }
+    - { name: "code", url: "https://github.com/Sumo048/CS-Pi" }
+
+- title: "BEACON: Belief-Enabled Adaptive CONtrol for Imitation Learning under Uncertainty"
+  authors: "Moonyoung Lee, <b>Soumojit Bhattacharya</b>, George Kantor, Oliver Kroemer"
+  venue: "arXiv 2026"
+  year: 2026
+  image: images/beacon.svg
+  tldr: "When the robot can't see the thing that matters, give the diffusion policy a Bayesian belief over the hidden state instead of raw history. Tested on tactile cornstalk gripper alignment and opening a latched door; the belief-conditioned policy beats observation-only and gets close to a privileged policy."
+  links:
+    - { name: "arXiv", url: "https://arxiv.org/abs/2609.22730" }
+
+- title: "Blind Tactile Exploration for Surface Reconstruction"
+  authors: "Yashaswi Sinha*, <b>Soumojit Bhattacharya*</b>, Yash Kumar Sahu, Pradipta Biswas"
+  venue: "ICRA 2025"
+  year: 2025
+  image: images/tactile-sensing.png
+  tldr: "Rebuilding fine surface detail by touch alone, with a sequential controller that decides where to feel next."
+  links:
+    - { name: "paper", url: "https://ieeexplore.ieee.org/abstract/document/11128235" }
+
+- title: "Curvature Informed Furthest Point Sampling"
+  authors: "Shubham Bhardwaj, <b>Soumojit Bhattacharya*</b>, Ashwin Vinod*, Aryan Koganti, Aditya Sai Ellendula, Balakrishna Reddy"
+  venue: "arXiv 2024"
+  year: 2024
+  image: images/CFPS.png
+  tldr: "Point cloud downsampling that keeps the curvy bits: curvature-aware FPS with an RL-learned selection. 22% lower Chamfer-L1 than plain FPS."
+  links:
+    - { name: "arXiv", url: "https://arxiv.org/abs/2411.16995" }
+
+- title: "DiffClone: Enhanced Behaviour Cloning in Robotics with Diffusion-Driven Policy Learning"
+  authors: "Sabariswaran Mani, Sreyas Venkataraman*, Abhranil Chandra*, Adyan Rizvi*, Yash Sirvi*, <b>Soumojit Bhattacharya*</b>, Aritra Hazra"
+  venue: "TOTO Benchmark, NeurIPS 2023"
+  year: 2023
+  image: images/diffclone.png
+  tldr: "Diffusion policies for offline pouring and scooping with sparse rewards."
+  links:
+    - { name: "arXiv", url: "https://arxiv.org/abs/2401.09243" }

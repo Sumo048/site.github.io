@@ -1,0 +1,32 @@
+# Course projects at CMU (shown as cards).
+course:
+  - title: "Preference-based Contrastive RL"
+    where: "Human-Robot Interaction course project, CMU"
+    team: "<b>Soumojit Bhattacharya</b>, Sreyas Venkataraman"
+    image: images/pbcrl.png
+    tldr: "Human (or VLM) preferences are noisy and state-wise, and one flipped label can point the agent straight at failure. We let the physics push back: offline updates from noisy preferences are interleaved with online contrastive goal-conditioned RL, so reachability overrides bad labels. Recovers working MetaWorld policies under heavy label noise, on par with C-GCRL and IPL."
+    links:
+      - { name: "report", url: "pdfs/pbcrl_report.pdf" }
+
+  - title: "RL for Articulated Object Manipulation"
+    where: "16-831 Intro to Robot Learning, CMU, Spring 2026"
+    team: "Kartik Sharma, Kshitiz, <b>Soumojit Bhattacharya</b>"
+    image: images/mardirl.svg
+    tldr: "A 13-DoF Fetch opening drawers in ManiSkill3. We benchmarked PPO, SAC and model-based RL, then tried three fixes for exploration: ICM curiosity, demo-augmented SAC with motion-planner demos, and BC warm-start followed by RL. ICM + PPO reached 70% success."
+    links:
+      - { name: "project site", url: "https://sites.google.com/andrew.cmu.edu/16-831-mardirl-project/home" }
+
+# Older work (shown as a compact list).
+earlier:
+  - title: "Lane changes that follow the rules"
+    where: "ARMS Lab, IIT Bombay (with Prof. Arpita Sinha)"
+    tldr: "Planning and decision-making for connected autonomous vehicles in CARLA, with lane-change policies that comply with Responsibility-Sensitive Safety."
+  - title: "Skill-based communication for multi-agent RL"
+    where: "Bachelor's thesis, IIT Kharagpur"
+    tldr: "Agents share skills instead of raw messages, for better coordination under partial observability."
+  - title: "Scalable multi-robot swarm navigation"
+    where: "IIT Kharagpur"
+    tldr: "An end-to-end RL pipeline for multi-agent pathfinding in dynamic environments."
+  - title: "CubeSat communication system"
+    where: "Student Satellite Program, IIT Kharagpur"
+    tldr: "Designed and field-tested ground-to-satellite comms, around trees, buildings and all."

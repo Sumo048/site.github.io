@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">
+  <rect width="400" height="300" fill="#FBF6EE"/>
+  <!-- belief axis -->
+  <line x1="40" y1="200" x2="360" y2="200" stroke="#1F1A17" stroke-width="2"/>
+  <!-- wide prior belief -->
+  <path d="M40 198 C 110 196, 140 120, 200 118 C 260 120, 290 196, 360 198" fill="#F2B634" fill-opacity=".35" stroke="#C99418" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <!-- sharp posterior belief -->
+  <path d="M120 199 C 190 198, 205 52, 238 50 C 270 52, 280 198, 330 199" fill="#C8452B" fill-opacity=".18" stroke="#C8452B" stroke-width="3"/>
+  <line x1="238" y1="50" x2="238" y2="200" stroke="#C8452B" stroke-width="2" stroke-dasharray="3 4"/>
+  <circle cx="238" cy="200" r="6" fill="#C8452B"/>
+  <!-- labels -->
+  <text x="58" y="104" font-size="15" fill="#574F48">before touch</text>
+  <path d="M110 110 C 130 116, 140 124, 150 140" stroke="#574F48" stroke-width="1.6" fill="none"/>
+  <text x="262" y="74" font-size="15" fill="#C8452B" font-weight="600">after touch</text>
+  <text x="168" y="226" font-size="13" fill="#574F48">hidden state (e.g. stalk offset, latch)</text>
+  <!-- little gripper probing -->
+  <g transform="translate(42 236)" stroke="#1F1A17" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M0 0 h40"/>
+    <path d="M40 0 v10 M40 0 v-10"/>
+    <path d="M40 -10 h14 M40 10 h14"/>
+    <circle cx="72" cy="0" r="8" fill="#0F7A68" stroke="none"/>
+  </g>
+  <text x="130" y="262" font-size="14" fill="#0F7A68" font-weight="600">policy acts on the belief, not raw history</text>
+</svg>

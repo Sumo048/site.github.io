@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">
+  <rect width="400" height="300" fill="#FBF6EE"/>
+  <!-- floor -->
+  <line x1="20" y1="250" x2="380" y2="250" stroke="#1F1A17" stroke-width="2"/>
+  <!-- cabinet -->
+  <rect x="230" y="90" width="120" height="160" rx="6" fill="#FFFFFF" stroke="#1F1A17" stroke-width="2.5"/>
+  <rect x="242" y="104" width="96" height="40" rx="4" fill="#F3ECDF" stroke="#1F1A17" stroke-width="2"/>
+  <rect x="242" y="196" width="96" height="40" rx="4" fill="#F3ECDF" stroke="#1F1A17" stroke-width="2"/>
+  <!-- open drawer -->
+  <path d="M242 150 h96 v40 h-96 z" fill="#F3ECDF" stroke="#1F1A17" stroke-width="2"/>
+  <path d="M242 150 l-44 10 v40 l44 -10" fill="#F2B634" fill-opacity=".55" stroke="#1F1A17" stroke-width="2"/>
+  <line x1="198" y1="160" x2="198" y2="200" stroke="#1F1A17" stroke-width="2"/>
+  <rect x="186" y="172" width="8" height="16" rx="2" fill="#1F1A17"/>
+  <!-- mobile manipulator -->
+  <rect x="40" y="200" width="80" height="40" rx="10" fill="#0F7A68"/>
+  <circle cx="60" cy="244" r="9" fill="#1F1A17"/>
+  <circle cx="100" cy="244" r="9" fill="#1F1A17"/>
+  <rect x="72" y="110" width="16" height="92" rx="4" fill="#1F1A17"/>
+  <circle cx="80" cy="96" r="14" fill="#FFFFFF" stroke="#1F1A17" stroke-width="2.5"/>
+  <circle cx="85" cy="94" r="3" fill="#1F1A17"/>
+  <path d="M88 140 L132 158 L178 178" stroke="#C8452B" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <path d="M178 170 h10 M178 186 h10" stroke="#1F1A17" stroke-width="4" stroke-linecap="round"/>
+  <!-- reward sparkle -->
+  <g fill="#C8452B">
+    <path d="M300 52 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5z"/>
+  </g>
+  <text x="196" y="40" font-size="15" fill="#574F48">PPO · SAC · ICM · BC→RL</text>
+</svg>

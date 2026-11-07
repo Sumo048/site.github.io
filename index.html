@@ -1,7 +1,179 @@
 ---
 layout: default
-title: Home
 ---
+<div class="wrap">
 
-<h1>Welcome to My Blog</h1>
-<p>This site is under construction.</p>
+  <nav class="topbar" aria-label="Sections">
+    <a class="wordmark" href="#top">SB</a>
+    <div class="navlinks">
+      <a href="#bets">Bets</a>
+      <a href="#now">Now</a>
+      <a href="#papers">Papers</a>
+      <a href="#projects">Projects</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+      <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/></svg>
+    </button>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
+    <div class="hero-text">
+      <p class="hello">Hi, I'm</p>
+      <h1>Soumojit Bhattacharya</h1>
+      <p class="pitch">I try to make robots learn from <mark>cheap data</mark>, stay <mark class="teal">grounded in reality</mark>, and then <mark class="sun">keep getting better</mark> once they're out in the world.</p>
+      <p>I'm a Master of Science in Robotics student at the <a href="https://www.ri.cmu.edu/">CMU Robotics Institute</a>, advised by <a href="https://shubhamtulsiani.com/">Shubham Tulsiani</a> and <a href="https://www.cs.cmu.edu/~okroemer/">Oliver Kroemer</a>. Before that I did my undergrad at <a href="https://www.iitkgp.ac.in/">IIT Kharagpur</a>.</p>
+      <p class="callout"><span class="dot" aria-hidden="true"></span> I'm applying to PhD programs for Fall 2027. Say hi at CoRL!</p>
+      <div class="links">
+        <a class="pill" href="mailto:soumojib@andrew.cmu.edu">Email</a>
+        <a class="pill" href="{{ site.baseurl }}/grad_CV.pdf">CV</a>
+        <a class="pill" href="https://scholar.google.com/citations?user=UsWEJr8AAAAJ">Scholar</a>
+        <a class="pill" href="https://github.com/Sumo048">GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/soumojit-bhattacharya-49575b1b0/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="{{ site.baseurl }}/images/my_img.jpg" alt="Soumojit smiling, in a suit, with green leaves behind">
+      <span class="sticker">CoRL '26</span>
+    </div>
+  </header>
+
+  <!-- ============ THE PROBLEM ============ -->
+  <section class="problem" aria-labelledby="problem-h">
+    <p class="kicker" id="problem-h">The problem I care about</p>
+    <p class="big-line">How do we <em>scale cheap data</em> for robots (simulation, planners, whatever is lying around) while keeping it grounded in reality, and then <em>improve</em> the robot through deployment?</p>
+
+    <ol class="pipeline">
+      <li class="stage s1">
+        <span class="step">1</span>
+        <h3>Cheap data from sim</h3>
+        <p>Planners in simulation know <i>what</i> to do. The pretrained policy knows <i>how</i>. Make sim data that has both.</p>
+        <span class="status wip">working on it</span>
+      </li>
+      <li class="stage s2">
+        <span class="step">2</span>
+        <h3>Deploy it safely</h3>
+        <p>Put an imperfect policy in the real world without it doing anything dumb we could have predicted.</p>
+        <span class="status done">CS-Pi · CoRL 2026</span>
+      </li>
+      <li class="stage s3">
+        <span class="step">3</span>
+        <h3>Learn from the surprises</h3>
+        <p>Fix the failures nobody predicted, which only show up once the robot is deployed.</p>
+        <span class="status wip">working on it</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ BETS ============ -->
+  <section id="bets" aria-labelledby="bets-h">
+    <h2 id="bets-h">My bets</h2>
+    <p class="section-lede">Research is a set of bets. Here are mine, roughly in order of how much I'd wager.</p>
+
+    <div class="bets">
+      <article class="bet">
+        <span class="bet-n">01</span>
+        <h3>Deploy early.</h3>
+        <p>Put learned policies in the real settings where they'll be used. That shows you the exact failures the policy will face, and it hands you high-quality on-policy data: both the failures and the good behaviour.</p>
+      </article>
+      <article class="bet">
+        <span class="bet-n">02</span>
+        <h3>On-policy data wins.</h3>
+        <p>After a year of continual-learning and forgetting experiments, my intuition is that what a fine-tuned policy becomes depends mostly on the fine-tuning data. Data that behaves like the base policy trains much better.</p>
+      </article>
+      <article class="bet">
+        <span class="bet-n">03</span>
+        <h3>Scale data, even messy data.</h3>
+        <p>Cheap, imperfect data is worth scaling, as long as you can make it look like something the policy would have done itself.</p>
+      </article>
+      <article class="bet">
+        <span class="bet-n">04</span>
+        <h3>Reweight the prior, don't replace it.</h3>
+        <p>Post-training should sharpen what pretraining gave you, not overwrite it.</p>
+      </article>
+      <article class="bet">
+        <span class="bet-n">05</span>
+        <h3>Practical problem → principled question.</h3>
+        <p>My favourite part of research is scoping. I like taking a messy real-world problem, finding the clean question inside it, and iterating fast. "Use planners in sim" is the practical idea; "make planner data on-policy for the base policy" is the question I can actually test.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ NOW ============ -->
+  <section id="now" aria-labelledby="now-h">
+    <h2 id="now-h">What I'm working on now</h2>
+
+    <div class="now-grid">
+      <article class="now-card">
+        <p class="kicker">Thread 1 · sim midtraining</p>
+        <h3>Teacher data that looks like the student</h3>
+        <p>A planner in simulation can solve tasks with no human in the loop, but its data looks nothing like what a pretrained policy would do, so fine-tuning on it fights the prior. Instead, I steer the frozen policy's own sampler toward the planner's intent. The data succeeds like the planner and looks like the policy. A planner gives the constraint; CS-Pi does the steering.</p>
+        <p class="qs-label">Questions I want to answer</p>
+        <ul class="qs">
+          <li>Given a simulator and a base policy, what is the right data for midtraining?</li>
+          <li>What distribution of scenes should that data come from?</li>
+          <li>Can midtraining set up downstream RL, by optimising pass@k instead of pass@1?</li>
+        </ul>
+      </article>
+
+      <article class="now-card">
+        <p class="kicker">Thread 2 · learning from deployment</p>
+        <h3>Unlearning failures nobody saw coming</h3>
+        <p>A big policy trained on lots of data will fail in ways nobody can predict. Only deployment exposes them. Successes are plentiful but mostly just reweight the policy; failures are rare and precious. My bet is that to remove a bad behaviour, you only need good behaviour <i>at exactly the states where it failed</i>, and the policy can often supply that itself. Think state-wise preferences, not trajectory-wise ones.</p>
+      </article>
+    </div>
+    <p class="also">Also on my mind: touch and force inside the sim-data story, and robots that improve themselves from deployment.</p>
+  </section>
+
+  <!-- ============ PAPERS ============ -->
+  <section id="papers" aria-labelledby="papers-h">
+    <h2 id="papers-h">Papers</h2>
+    <p class="section-lede">* equal contribution</p>
+
+    <div class="cards">
+      {% for p in site.data.publications %}
+      <article class="card{% if p.highlight %} card-hl{% endif %}">
+        <div class="thumb"><img src="{{ site.baseurl }}/{{ p.image }}" alt=""></div>
+        <div class="card-body">
+          <p class="venue">{{ p.venue }}</p>
+          <h3>{{ p.title }}</h3>
+          <p class="authors">{{ p.authors }}</p>
+          <p class="tldr">{{ p.tldr }}</p>
+          <p class="card-links">{% for l in p.links %}<a href="{% if l.url contains '://' %}{{ l.url }}{% else %}{{ site.baseurl }}/{{ l.url }}{% endif %}">{{ l.name }}</a>{% endfor %}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" aria-labelledby="projects-h">
+    <h2 id="projects-h">Course projects</h2>
+    <div class="cards">
+      {% for p in site.data.projects.course %}
+      <article class="card">
+        <div class="thumb"><img src="{{ site.baseurl }}/{{ p.image }}" alt=""></div>
+        <div class="card-body">
+          <p class="venue">{{ p.where }}</p>
+          <h3>{{ p.title }}</h3>
+          <p class="authors">{{ p.team }}</p>
+          <p class="tldr">{{ p.tldr }}</p>
+          <p class="card-links">{% for l in p.links %}<a href="{% if l.url contains '://' %}{{ l.url }}{% else %}{{ site.baseurl }}/{{ l.url }}{% endif %}">{{ l.name }}</a>{% endfor %}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <h2 class="h2-small">Before CMU</h2>
+    <ul class="earlier">
+      {% for p in site.data.projects.earlier %}
+      <li><b>{{ p.title }}</b> <span class="where">{{ p.where }}</span><br>{{ p.tldr }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <p>Thanks for scrolling this far. Original layout from <a href="https://jonbarron.info">Jon Barron's website</a>.</p>
+  </footer>
+</div>

@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
@@ -5,201 +7,48 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-E00L9PT3V9');
   </script>
-  <title>{{ site.name }}</title>
-
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
-  <meta name="author" content="{{ site.name }}" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <title>{{ site.name }}</title>
+  <meta name="author" content="{{ site.name }}">
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ site.name }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="{{ site.url }}/images/my_img.jpg">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link rel="icon" href="/favihat.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="/favihat.ico" type="image/x-icon">
-
-
-  <style>
-    body {
-      background: linear-gradient(155deg, #0f2027, #203a43, #2c5364);    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);   Space Grey Gradient */
-      color: #ffffff;  /* White Text */
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-    }
-
-    .section-intro, .section-research, .section-projects {
-      padding: 30px;
-    }
-
-    a {
-      color: #a0c4ff;  /* Light Blue for Links */
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    h1, h2 {
-      color: #c1ffff;  /* Ensure Headers are White */
-    }
-
-    h3 {
-      color: #f4b400;
-    }
-  </style>
+  <link rel="icon" href="{{ site.baseurl }}/favihat.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <script>
+    // Apply a saved theme before paint (no flash).
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
 </head>
-
-
 <body>
-  <div class="section-intro">
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:60%;vertical-align:middle">
-                <h1>
-                  Soumojit Bhattacharya
-                </h1>
-               <p>
-                  I am currently a Master of Science in Robotics (MSR) student at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, advised by <a href="https://shubhamtulsiani.com/">Professor Shubham Tulsiani</a> and <a href="https://www.cs.cmu.edu/~okroemer/">Professor Oliver Kroemer</a>. My primary research focuses on robotic manipulation, developing manipulation pipelines that generalize across diverse objects and execute complex tasks by decomposing them into simpler motions.
-              </p>
-              <p>
-                  Currently, I am working on diffusion policies for robotic manipulation, aiming to advance adaptable and robust manipulation strategies capable of handling variability in objects and tasks. My research strives to enable intelligent robotic systems that perform a wide range of challenging manipulation tasks efficiently and flexibly.
-              </p>
-              <p>
-                  I graduated with a B.Tech. in Electronics and Electrical Communication Engineering from <a href="https://www.iitkgp.ac.in/">Indian Institute of Technology Kharagpur</a>, where I worked with Professor Aritra Hazra. I was also a member of the Autonomous Ground Vehicle Group at IIT Kharagpur, under the mentorship of Professor Debashish Chakravarty.
-              </p>
-              <p>
-                  I began my research journey with internships at institutions, including the <a href="https://www.sc.iitb.ac.in/robotics/">ARMS Lab</a> at <a href="https://www.iitb.ac.in/">IIT Bombay</a>, where I worked on path planning and decision-making for connected autonomous vehicles under Professor Arpita Sinha, developing lane-change policies in CARLA simulations that comply with Responsibility-Sensitive Safety (RSS) rules. Prior to that, I was a research intern at the <a href="https://cambum.net/I3D.htm">I3D Lab</a> at <a href="https://iisc.ac.in/">IISc Bangalore</a>, working on tactile manipulation and reinforcement learning under Professor Pradipta Biswas, focusing on designing RL pipelines and behavior cloning strategies for exploration tasks using tactile data.
-              </p>
-              <p>
-                  Driven by a vision where robots assist humans seamlessly by performing complex physical tasks, I aspire to contribute impactful research in robotics that fosters collaborative and generalizable manipulation capabilities for real-world applications.
-              </p>
-
-
-                <p style="text-align:center">
-                <a target="_blank" href="mailto:soumojit048@kgpian.iitkgp.ac.in?"> Email</a> &nbsp;/&nbsp;
-                <a href="https://github.com/BabaYaga840">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?hl=en&user=UsWEJr8AAAAJ&view_op=list_works&gmla=AFix5MY9Aq_W8_Zz02R6IomXxZr621Uquj7uMfUcbTqYQ684xwbEM2Lynuf38QZ9sakmGEB9eAU4IN_GXXx4QjVZ">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/soumojit-bhattacharya-49575b1b0/"> LinkedIn </a> &nbsp;/&nbsp;
-                <a href="https://github.com/BabaYaga840/BabaYaga840.github.io/blob/master/grad_CV.pdf"> CV </a>
-              </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <img style="width:100%;max-width:100%" alt="profile photo" src="images/my_img.jpg">
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="section-research">
-    <table style="width:100%;">
-      <tr>
-        <td style="padding:2.5%;width:100%;vertical-align:middle">
-          <h2>Research</h2>
-<p>
-    My research focuses on reinforcement learning, multi-agent systems, and robotic manipulation. I am particularly interested in developing robust learning algorithms that enable robots to adapt and collaborate in dynamic environments.  
-</p>
-<p>
-    Currently, I am exploring tactile-based reinforcement learning for surface reconstruction and manipulation, as well as skill-based communication in multi-agent systems.
-</p>
-        </td>
-      </tr>
-    </table>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              {{post.authors}}
-
-              <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-  </div>
-
-  <div class="section-projects">
-    <table style="width:100%;">
-      <tr>
-        <td style="padding:2.5%;width:100%;">
-          <h2>Other Projects</h2>
-          <p>These include coursework, side projects, and unpublished research work.</p>
-        </td>
-      </tr>
-    </table>
-
-    <table style="width:100%;">
-      {% for post in site.posts %}
-      {% for cat in post.categories %}
-      {% if cat != 'research' and cat != 'Intel' %}
-      <tr>
-        <td style="padding:2.5%;width:25%;vertical-align:middle;">
-          <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-        </td>
-        <td style="padding:2.5%;width:75%;vertical-align:middle">
-          <h3>{{post.title}}</h3>
-          <p>{{ post.excerpt }}</p>
-        </td>
-      </tr>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-      
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-    </table>
-  </div>
+{{ content }}
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var root = document.documentElement;
+    function isDark() {
+      var t = root.getAttribute('data-theme');
+      if (t) return t === 'dark';
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function sync() { btn.setAttribute('aria-pressed', isDark() ? 'true' : 'false'); }
+    btn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      sync();
+    });
+    sync();
+  })();
+</script>
 </body>
+</html>
