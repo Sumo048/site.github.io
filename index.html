@@ -22,7 +22,7 @@ layout: default
     <div class="hero-text">
       <p class="hello">Hi, I'm</p>
       <h1>Soumojit Bhattacharya</h1>
-      <p class="pitch">I try to make robots learn from <mark>cheap data</mark>, stay <mark class="teal">grounded in reality</mark>, and then <mark class="sun">keep getting better</mark> once they're out in the world.</p>
+      <p class="pitch">I want to make robots learn from <mark>&ldquo;cheap&rdquo; data</mark>, stay <mark class="teal">grounded in reality</mark>, and then <mark class="sun">keep learning continually</mark> once they're deployed.</p>
       <p>I'm a Master of Science in Robotics student at the <a href="https://www.ri.cmu.edu/">CMU Robotics Institute</a>, advised by <a href="https://shubhamtulsiani.com/">Shubham Tulsiani</a> and <a href="https://www.cs.cmu.edu/~okroemer/">Oliver Kroemer</a>. Before that I did my undergrad at <a href="https://www.iitkgp.ac.in/">IIT Kharagpur</a>.</p>
       <p class="callout"><span class="dot" aria-hidden="true"></span> I'm applying to PhD programs for Fall 2027. Say hi at CoRL!</p>
       <div class="links">
@@ -43,63 +43,19 @@ layout: default
     </div>
   </header>
 
-  <!-- ============ THE PROBLEM ============ -->
-  <section class="problem" aria-labelledby="problem-h">
-    <p class="kicker" id="problem-h">The problem I care about</p>
-    <p class="big-line">How do we <em>scale cheap data</em> for robots (simulation, and whatever else is lying around) while keeping it grounded in reality, and then <em>improve</em> the robot through deployment?</p>
-
-    <ol class="pipeline">
-      <li class="stage s1">
-        <span class="step">1</span>
-        <h3>Cheap data from sim</h3>
-        <p>Get lots of useful training data out of simulation.</p>
-        <span class="status wip">working on it</span>
-      </li>
-      <li class="stage s2">
-        <span class="step">2</span>
-        <h3>Deploy it safely</h3>
-        <p>Put an imperfect policy in the real world without it doing anything dumb we could have predicted.</p>
-        <span class="status done">CS-Pi · CoRL 2026</span>
-      </li>
-      <li class="stage s3">
-        <span class="step">3</span>
-        <h3>Learn from the surprises</h3>
-        <p>Improve from the failures that only show up once the robot is deployed.</p>
-        <span class="status wip">working on it</span>
-      </li>
-    </ol>
-  </section>
-
   <!-- ============ BETS ============ -->
   <section id="bets" aria-labelledby="bets-h">
     <h2 id="bets-h">My bets</h2>
-    <p class="section-lede">Research is a set of bets. Here are mine.</p>
-
     <div class="bets">
       <article class="bet">
         <span class="bet-n">01</span>
-        <h3>Deploy early.</h3>
-        <p>The real world shows you the failures that matter.</p>
+        <h3>Sim is cheap coverage.</h3>
+        <p>Simulation is a great source of cheap data for robotics, and it can give policies the state and action coverage that real data alone can't.</p>
       </article>
       <article class="bet">
         <span class="bet-n">02</span>
-        <h3>On-policy data wins.</h3>
-        <p>Policies learn best from data that looks like their own.</p>
-      </article>
-      <article class="bet">
-        <span class="bet-n">03</span>
-        <h3>Scale data, even messy data.</h3>
-        <p>Cheap and imperfect beats scarce and perfect.</p>
-      </article>
-      <article class="bet">
-        <span class="bet-n">04</span>
-        <h3>Reweight the prior, don't replace it.</h3>
-        <p>Post-training should sharpen pretraining, not overwrite it.</p>
-      </article>
-      <article class="bet">
-        <span class="bet-n">05</span>
-        <h3>Practical problem → principled question.</h3>
-        <p>Scoping is my favourite part of research.</p>
+        <h3>Deploy fast, learn on the job.</h3>
+        <p>Get policies into the real world as fast as possible, then improve them from robots actually doing (or trying to do) the tasks where they'll be useful.</p>
       </article>
     </div>
   </section>
