@@ -141,12 +141,32 @@ mark.sun { background: linear-gradient(transparent 55%, var(--sun-soft) 55%); }
 }
 .pill:hover { background: var(--ink); color: var(--bg); transform: translateY(-2px); }
 .hero-photo { position: relative; }
-.hero-photo img {
-  width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 28px;
-  border: 6px solid var(--surface); box-shadow: var(--shadow);
+.photo-swap {
+  display: block; width: 100%; padding: 0; border: 6px solid var(--surface); border-radius: 28px;
+  background: var(--surface); box-shadow: var(--shadow); cursor: pointer;
+  position: relative; aspect-ratio: 1; overflow: hidden;
   transform: rotate(2.5deg); transition: transform .3s;
 }
-.hero-photo:hover img { transform: rotate(-1.5deg) scale(1.02); }
+.photo-swap:hover { transform: rotate(-1.5deg) scale(1.02); }
+.photo-swap:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.photo-swap .ph {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  border-radius: 22px; opacity: 0; transition: opacity .35s;
+}
+.photo-swap .ph.is-on { opacity: 1; }
+.photo-swap.flip { animation: wiggle .45s ease; }
+@keyframes wiggle {
+  0% { transform: rotate(2.5deg); }
+  35% { transform: rotate(-5deg) scale(.97); }
+  70% { transform: rotate(4deg) scale(1.02); }
+  100% { transform: rotate(2.5deg); }
+}
+.tap-hint {
+  position: absolute; right: -6px; top: -12px; transform: rotate(8deg);
+  font-family: var(--font-mono); font-size: 12px; color: var(--ink-2);
+  background: var(--surface); border: 1px dashed var(--ink-3); border-radius: 999px; padding: 2px 9px;
+  pointer-events: none;
+}
 .sticker {
   position: absolute; left: -14px; bottom: 18px;
   background: var(--sun); color: #1F1A17; font-family: var(--font-display); font-weight: 800;

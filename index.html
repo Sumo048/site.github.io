@@ -34,8 +34,12 @@ layout: default
       </div>
     </div>
     <div class="hero-photo">
-      <img src="{{ site.baseurl }}/images/my_img.jpg" alt="Soumojit smiling, in a suit, with green leaves behind">
+      <button type="button" class="photo-swap" id="photo-swap" aria-label="Show another photo of me">
+        <img class="ph ph-1 is-on" src="{{ site.baseurl }}/images/me-1.jpg" alt="Soumojit in a grey cap and glasses, against a wooden wall">
+        <img class="ph ph-2" src="{{ site.baseurl }}/images/me-2.jpg" alt="Soumojit in sunglasses on a sunny street">
+      </button>
       <span class="sticker">CoRL '26</span>
+      <span class="tap-hint" aria-hidden="true">click me</span>
     </div>
   </header>
 

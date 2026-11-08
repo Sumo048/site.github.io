@@ -16,7 +16,7 @@
   <meta name="description" content="{{ site.description }}">
   <meta property="og:title" content="{{ site.name }}">
   <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:image" content="{{ site.url }}/images/my_img.jpg">
+  <meta property="og:image" content="{{ site.url }}/images/me-1.jpg">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" href="{{ site.baseurl }}/favihat.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +31,17 @@
 <body>
 {{ content }}
 <script>
+  (function () {
+    var sw = document.getElementById('photo-swap');
+    if (!sw) return;
+    var imgs = sw.querySelectorAll('.ph'), i = 0;
+    sw.addEventListener('click', function () {
+      imgs[i].classList.remove('is-on');
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add('is-on');
+      sw.classList.remove('flip'); void sw.offsetWidth; sw.classList.add('flip');
+    });
+  })();
   (function () {
     var btn = document.getElementById('theme-toggle');
     if (!btn) return;
