@@ -1,4 +1,4 @@
-# Papers, newest first. `me: true` cards get the highlight treatment.
+# Papers, newest first. `highlight: true` cards get a highlighted border.
 # Authors: wrap your own name in <b></b>.
 
 - title: "CS-Pi: Constraint-Satisfying Flow Policy Sampling"
@@ -17,7 +17,7 @@
   authors: "Moonyoung Lee, <b>Soumojit Bhattacharya</b>, George Kantor, Oliver Kroemer"
   venue: "arXiv 2026"
   year: 2026
-  image: images/beacon.svg
+  image: images/beacon.png
   tldr: "When the robot can't see the thing that matters, give the diffusion policy a Bayesian belief over the hidden state instead of raw history. Tested on tactile cornstalk gripper alignment and opening a latched door; the belief-conditioned policy beats observation-only and gets close to a privileged policy."
   links:
     - { name: "arXiv", url: "https://arxiv.org/abs/2609.22730" }
@@ -26,6 +26,7 @@
   authors: "Yashaswi Sinha*, <b>Soumojit Bhattacharya*</b>, Yash Kumar Sahu, Pradipta Biswas"
   venue: "ICRA 2025"
   year: 2025
+  highlight: true
   image: images/tactile-sensing.png
   tldr: "Rebuilding fine surface detail by touch alone, with a sequential controller that decides where to feel next."
   links:

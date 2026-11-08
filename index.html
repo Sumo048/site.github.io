@@ -42,13 +42,13 @@ layout: default
   <!-- ============ THE PROBLEM ============ -->
   <section class="problem" aria-labelledby="problem-h">
     <p class="kicker" id="problem-h">The problem I care about</p>
-    <p class="big-line">How do we <em>scale cheap data</em> for robots (simulation, planners, whatever is lying around) while keeping it grounded in reality, and then <em>improve</em> the robot through deployment?</p>
+    <p class="big-line">How do we <em>scale cheap data</em> for robots (simulation, and whatever else is lying around) while keeping it grounded in reality, and then <em>improve</em> the robot through deployment?</p>
 
     <ol class="pipeline">
       <li class="stage s1">
         <span class="step">1</span>
         <h3>Cheap data from sim</h3>
-        <p>Planners in simulation know <i>what</i> to do. The pretrained policy knows <i>how</i>. Make sim data that has both.</p>
+        <p>Get lots of useful training data out of simulation.</p>
         <span class="status wip">working on it</span>
       </li>
       <li class="stage s2">
@@ -60,7 +60,7 @@ layout: default
       <li class="stage s3">
         <span class="step">3</span>
         <h3>Learn from the surprises</h3>
-        <p>Fix the failures nobody predicted, which only show up once the robot is deployed.</p>
+        <p>Improve from the failures that only show up once the robot is deployed.</p>
         <span class="status wip">working on it</span>
       </li>
     </ol>
@@ -69,33 +69,33 @@ layout: default
   <!-- ============ BETS ============ -->
   <section id="bets" aria-labelledby="bets-h">
     <h2 id="bets-h">My bets</h2>
-    <p class="section-lede">Research is a set of bets. Here are mine, roughly in order of how much I'd wager.</p>
+    <p class="section-lede">Research is a set of bets. Here are mine.</p>
 
     <div class="bets">
       <article class="bet">
         <span class="bet-n">01</span>
         <h3>Deploy early.</h3>
-        <p>Put learned policies in the real settings where they'll be used. That shows you the exact failures the policy will face, and it hands you high-quality on-policy data: both the failures and the good behaviour.</p>
+        <p>The real world shows you the failures that matter.</p>
       </article>
       <article class="bet">
         <span class="bet-n">02</span>
         <h3>On-policy data wins.</h3>
-        <p>After a year of continual-learning and forgetting experiments, my intuition is that what a fine-tuned policy becomes depends mostly on the fine-tuning data. Data that behaves like the base policy trains much better.</p>
+        <p>Policies learn best from data that looks like their own.</p>
       </article>
       <article class="bet">
         <span class="bet-n">03</span>
         <h3>Scale data, even messy data.</h3>
-        <p>Cheap, imperfect data is worth scaling, as long as you can make it look like something the policy would have done itself.</p>
+        <p>Cheap and imperfect beats scarce and perfect.</p>
       </article>
       <article class="bet">
         <span class="bet-n">04</span>
         <h3>Reweight the prior, don't replace it.</h3>
-        <p>Post-training should sharpen what pretraining gave you, not overwrite it.</p>
+        <p>Post-training should sharpen pretraining, not overwrite it.</p>
       </article>
       <article class="bet">
         <span class="bet-n">05</span>
         <h3>Practical problem → principled question.</h3>
-        <p>My favourite part of research is scoping. I like taking a messy real-world problem, finding the clean question inside it, and iterating fast. "Use planners in sim" is the practical idea; "make planner data on-policy for the base policy" is the question I can actually test.</p>
+        <p>Scoping is my favourite part of research.</p>
       </article>
     </div>
   </section>
@@ -103,27 +103,16 @@ layout: default
   <!-- ============ NOW ============ -->
   <section id="now" aria-labelledby="now-h">
     <h2 id="now-h">What I'm working on now</h2>
-
     <div class="now-grid">
       <article class="now-card">
-        <p class="kicker">Thread 1 · sim midtraining</p>
-        <h3>Teacher data that looks like the student</h3>
-        <p>A planner in simulation can solve tasks with no human in the loop, but its data looks nothing like what a pretrained policy would do, so fine-tuning on it fights the prior. Instead, I steer the frozen policy's own sampler toward the planner's intent. The data succeeds like the planner and looks like the policy. A planner gives the constraint; CS-Pi does the steering.</p>
-        <p class="qs-label">Questions I want to answer</p>
-        <ul class="qs">
-          <li>Given a simulator and a base policy, what is the right data for midtraining?</li>
-          <li>What distribution of scenes should that data come from?</li>
-          <li>Can midtraining set up downstream RL, by optimising pass@k instead of pass@1?</li>
-        </ul>
+        <p class="kicker">Sim midtraining</p>
+        <p>Making cheap simulation data useful for pretrained robot policies.</p>
       </article>
-
       <article class="now-card">
-        <p class="kicker">Thread 2 · learning from deployment</p>
-        <h3>Unlearning failures nobody saw coming</h3>
-        <p>A big policy trained on lots of data will fail in ways nobody can predict. Only deployment exposes them. Successes are plentiful but mostly just reweight the policy; failures are rare and precious. My bet is that to remove a bad behaviour, you only need good behaviour <i>at exactly the states where it failed</i>, and the policy can often supply that itself. Think state-wise preferences, not trajectory-wise ones.</p>
+        <p class="kicker">Learning from deployment</p>
+        <p>Helping deployed robots unlearn failures nobody predicted.</p>
       </article>
     </div>
-    <p class="also">Also on my mind: touch and force inside the sim-data story, and robots that improve themselves from deployment.</p>
   </section>
 
   <!-- ============ PAPERS ============ -->
